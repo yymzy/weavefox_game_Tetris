@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  overflow: hidden; /* 防止页面滚动 */
+}
+
+/* 防止键盘操作时页面滚动 */
+html, body {
+  overscroll-behavior: none;
+}
+
+.pixel-border {
+  border: 4px solid #cbd5e1;
+  box-shadow: 
+    inset 4px 4px 0px 0px #94a3b8,
+    inset -4px -4px 0px 0px #f1f5f9,
+    4px 4px 0px 0px #475569;
+}
+
+.pixel-button {
+  @apply pixel-border bg-slate-200 font-bold py-2 px-4 transition-all;
+}
+
+.pixel-button:hover {
+  background-color: #cbd5e1;
+  box-shadow: 
+    inset 2px 2px 0px 0px #94a3b8,
+    inset -2px -2px 0px 0px #f1f5f9,
+    2px 2px 0px 0px #475569;
+}
+
+.pixel-button:active {
+  box-shadow: 
+    inset 4px 4px 0px 0px #f1f5f9,
+    inset -4px -4px 0px 0px #94a3b8,
+    0px 0px 0px 0px #475569;
+  transform: translate(4px, 4px);
+}
+
+.tetris-block {
+  border: 2px solid #1e293b;
+  box-shadow: 
+    inset 2px 2px 0px 0px rgba(255, 255, 255, 0.3),
+    inset -2px -2px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+.game-cell {
+  border: 1px solid rgba(30, 41, 59, 0.3);
+}
+
+/* 响应式容器 */
+.container {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
